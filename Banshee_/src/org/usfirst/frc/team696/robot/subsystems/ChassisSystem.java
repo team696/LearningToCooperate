@@ -26,5 +26,28 @@ public class ChassisSystem extends Subsystem {
         // Set the default command for a subsystem here.
         //setDefaultCommand(new MySpecialCommand());
     }
+    
+    public void setSpeed(double leftDrive, double rightDrive){
+    	this.leftDrive = leftDrive;
+    	this.rightDrive = rightDrive;
+    	drive();
+    }
+    
+    public double getLeftSpeed(){
+    	return leftDrive;
+    }
+    
+    public double getRightSpeed(){
+    	return rightDrive;
+    }
+    
+    public void drive(){
+    	drive.tankDrive(leftDrive, rightDrive);
+    	
+    }
+    
+    public void stop(){
+    	drive.tankDrive(0, 0);
+    }
 }
 

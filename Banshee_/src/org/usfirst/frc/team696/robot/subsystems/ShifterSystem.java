@@ -2,39 +2,30 @@ package org.usfirst.frc.team696.robot.subsystems;
 
 import org.usfirst.frc.team696.robot.RobotMap;
 
-import edu.wpi.first.wpilibj.Victor;
+import edu.wpi.first.wpilibj.Solenoid;
 import edu.wpi.first.wpilibj.command.Subsystem;
 
 /**
  *
  */
-public class ShooterSystem extends Subsystem {
+public class ShifterSystem extends Subsystem {
     
     // Put methods for controlling this subsystem
     // here. Call these from Commands.
 	
-	Victor topShooter = new Victor(RobotMap.shooterTop);
-	Victor botShooter = new Victor(RobotMap.shooterBot);
-	
-	double speed = 0;
-	
-	public ShooterSystem(){
-		
-	}
+	Solenoid shift = new Solenoid(RobotMap.shift);
 
     public void initDefaultCommand() {
         // Set the default command for a subsystem here.
         //setDefaultCommand(new MySpecialCommand());
     }
     
-    public void setSpeed(double speed){
-    	this.speed = speed;
-    	run();
+    public void shiftHigh(){
+    	shift.set(false);
     }
     
-    private void run(){
-    	topShooter.set(speed);
-    	botShooter.set(speed);
+    public void shiftLow(){
+    	shift.set(true);
     }
 }
 
