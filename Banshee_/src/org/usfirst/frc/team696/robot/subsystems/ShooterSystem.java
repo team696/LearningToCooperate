@@ -34,7 +34,7 @@ public class ShooterSystem extends Subsystem {
     
     private void run(){
     	topShooter.set(speed);
-    	botShooter.set(speed);
+    	botShooter.set(-speed);
     }
 }
 
