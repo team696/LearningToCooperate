@@ -15,7 +15,7 @@ public class ShifterCommand extends Command {
 
 	public ShifterCommand() {
         // Use requires() here to declare subsystem dependencies
-        // eg. requires(chassis);
+        // eg. requires(chassis)
 		requires(Robot.shifterSystem);
     }
 
