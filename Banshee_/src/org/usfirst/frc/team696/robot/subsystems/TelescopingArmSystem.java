@@ -35,6 +35,7 @@ public class TelescopingArmSystem extends Subsystem {
     
     public void teleArm(){
     	top.set(topM);
+    	bot.set(botM);
     }
 }
 

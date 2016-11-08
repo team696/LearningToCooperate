@@ -12,6 +12,7 @@ import org.usfirst.frc.team696.robot.commands.ExampleCommand;
 import org.usfirst.frc.team696.robot.subsystems.ChassisSystem;
 import org.usfirst.frc.team696.robot.subsystems.ExampleSubsystem;
 import org.usfirst.frc.team696.robot.subsystems.PivotArmSystem;
+import org.usfirst.frc.team696.robot.subsystems.ShifterSystem;
 import org.usfirst.frc.team696.robot.subsystems.ShooterSystem;
 
 import com.kauailabs.nav6.frc.IMU;
@@ -33,6 +34,8 @@ public class Robot extends IterativeRobot {
 	public static final ChassisSystem chassisSystem = new ChassisSystem();
 	public static final ShooterSystem shooterSystem = new ShooterSystem();
 	public static final PivotArmSystem pivotSystem = new PivotArmSystem();
+	public static final ShifterSystem shifterSystem = new ShifterSystem();
+	
 	public static OI oi;
 
     Command autonomousCommand;
