@@ -1,27 +1,18 @@
 package org.usfirst.frc.team696.robot.commands;
 
-import org.usfirst.frc.team696.robot.PIDControl;
 import org.usfirst.frc.team696.robot.Robot;
-import org.usfirst.frc.team696.robot.subsystems.PivotArmSystem;
 
 import edu.wpi.first.wpilibj.command.Command;
 
 /**
  *
  */
-public class PivotCommand extends Command {
-	PIDControl PID = new PIDControl(0, 0, 0, 0);
-	double speed = 0;
-	double target = 0;
-	double current = 0;
-	double error = 0;
-	
-	
-    public PivotCommand(double target) {
+public class TelescopingArmCommand extends Command {
+
+    public TelescopingArmCommand() {
         // Use requires() here to declare subsystem dependencies
         // eg. requires(chassis);
-    	requires(Robot.pivotSystem);
-    	this.target = target;
+    	requires(Robot.telescopingArmSystem);
     }
 
     // Called just before this Command runs the first time
@@ -30,15 +21,6 @@ public class PivotCommand extends Command {
 
     // Called repeatedly when this Command is scheduled to run
     protected void execute() {
-    	current = Robot.pivotEnc.get();
-    	error = target - current;
-    	
-    	PID.setError(error);
-    	speed = PID.getValue();
-    	
-    	Robot.pivotSystem.setSpeed(speed, speed);
-    	
-    	
     }
 
     // Make this return true when this Command no longer needs to run execute()

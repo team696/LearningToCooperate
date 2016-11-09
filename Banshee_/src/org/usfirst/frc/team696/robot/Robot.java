@@ -13,6 +13,7 @@ import org.usfirst.frc.team696.robot.subsystems.ChassisSystem;
 import org.usfirst.frc.team696.robot.subsystems.ExampleSubsystem;
 import org.usfirst.frc.team696.robot.subsystems.PivotArmSystem;
 import org.usfirst.frc.team696.robot.subsystems.ShooterSystem;
+import org.usfirst.frc.team696.robot.subsystems.TelescopingArmSystem;
 
 import com.kauailabs.nav6.frc.IMU;
 import com.kauailabs.nav6.frc.IMUAdvanced;
@@ -33,6 +34,7 @@ public class Robot extends IterativeRobot {
 	public static final ChassisSystem chassisSystem = new ChassisSystem();
 	public static final ShooterSystem shooterSystem = new ShooterSystem();
 	public static final PivotArmSystem pivotSystem = new PivotArmSystem();
+	public static final TelescopingArmSystem telescopingArmSystem = new TelescopingArmSystem();
 	public static OI oi;
 
     Command autonomousCommand;
@@ -40,12 +42,12 @@ public class Robot extends IterativeRobot {
     public static IMU navX;
 	SerialPort port;
 	
-	Encoder pivotEnc = new Encoder(RobotMap.pivotEncA, RobotMap.pivotEncB);
-	Encoder rightEnc = new Encoder(RobotMap.rightEncA, RobotMap.rightEncB);
-	Encoder leftEnc = new Encoder(RobotMap.leftEncA, RobotMap.leftEncB);
-	Encoder botShooter = new Encoder(RobotMap.botShooterA, RobotMap.botShooterB);
-	Encoder topShooter = new Encoder(RobotMap.topShooterA, RobotMap.topShooterB);
-	Encoder telescoping = new Encoder(RobotMap.telescopingA, RobotMap.telescopingB);
+	public static Encoder pivotEnc = new Encoder(RobotMap.pivotEncA, RobotMap.pivotEncB);
+	public static Encoder rightEnc = new Encoder(RobotMap.rightEncA, RobotMap.rightEncB);
+	public static Encoder leftEnc = new Encoder(RobotMap.leftEncA, RobotMap.leftEncB);
+	public static Encoder botShooter = new Encoder(RobotMap.botShooterA, RobotMap.botShooterB);
+	public static Encoder topShooter = new Encoder(RobotMap.topShooterA, RobotMap.topShooterB);
+	public static Encoder telescoping = new Encoder(RobotMap.telescopingA, RobotMap.telescopingB);
 	
 
     /**
