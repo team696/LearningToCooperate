@@ -36,6 +36,7 @@ public class Robot extends IterativeRobot {
 	public static final PivotArmSystem pivotSystem = new PivotArmSystem();
 	public static final ShifterSystem shifterSystem = new ShifterSystem();
 	
+	
 	public static OI oi;
 
     Command autonomousCommand;
