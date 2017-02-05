@@ -19,6 +19,7 @@ public class OI {
 	public static Joystick driver = new Joystick(1);
 	
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 	Button shiftHigh = new JoystickButton(driver, 1);
 	Button shiftLow = new JoystickButton(driver, 2);
@@ -29,6 +30,16 @@ public class OI {
 		shiftLow.whenPressed(new ShifterCommand(false));
 	}
 >>>>>>> branch 'master' of https://github.com/team696/LearningToCooperate
+=======
+	Button shiftHigh = new JoystickButton(driver, 1);
+	Button shiftLow = new JoystickButton(driver, 2);
+    
+	
+	public OI() {
+		shiftHigh.whenPressed(new ShifterCommand(true));
+		shiftLow.whenPressed(new ShifterCommand(false));
+	}
+>>>>>>> refs/remotes/origin/master
     //// CREATING BUTTONS
     // One type of button is a joystick button which is any button on a joystick.
     // You create one by telling it which joystick it's on and which button
