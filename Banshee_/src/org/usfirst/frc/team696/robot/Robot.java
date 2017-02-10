@@ -38,6 +38,7 @@ public class Robot extends IterativeRobot {
 	public static final TelescopingArmSystem telescopingArmSystem = new TelescopingArmSystem();
 	public static final ShifterSystem shifterSystem = new ShifterSystem();
 	
+	
 	public static OI oi;
 
     Command autonomousCommand;
