@@ -37,7 +37,7 @@ import org.usfirst.frc.team696.robot.subsystems.ShifterSystem;
 public class ShifterCommand extends Command {
 
 
-	public ShifterCommand() {
+	public ShifterCommand(boolean b) {
         // Use requires() here to declare subsystem dependencies
         // eg. requires(chassis)
 		requires(Robot.shifterSystem);
